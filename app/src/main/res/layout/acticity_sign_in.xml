@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:textDirection="rtl"
+        android:weightSum="2">
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/logo"/>
+
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/rounded_corners_black_not_fill"
+            android:hint="البريد الاكتروني"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners_black_not_fill"
+            android:hint="@string/password_input"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/btnForgetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <!--android:text="@string/restore_password"-->
+
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_corners_bleu_fill"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_bleu_fill"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/sign_up"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</ScrollView>

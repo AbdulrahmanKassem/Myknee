@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ركبتي عزيزتي</string>
+    <string name="password_input" translatable="false"> كلمة المرور</string>
+    <string name="sign_in" translatable="false">تسجيل الدخول</string>
+    <string name="restore_password" translatable="false">نسيت كلمة المرور؟</string>
+    <string name="sign_up" translatable="false">لا يوجد لديكم حساب؟</string>
+    <string name="textError" translatable="false">يرجى ملء الخانة بالطريقه الصحيحه</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

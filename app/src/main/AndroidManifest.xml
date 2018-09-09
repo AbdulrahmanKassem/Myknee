@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.medical.myknee">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SignInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".specialized.MainSpecialized" />
+        <activity android:name=".specialized.SelectExercise" />
+        <activity android:name=".specialized.SelectExerciseTime" />
+        <activity android:name=".intern.MainIntern" />
+        <activity android:name=".intern.ReadyToExercise" />
+        <activity android:name=".intern.StartExercise" />
+
+        <receiver
+            android:name=".classes.Alarm"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".specialized.SelectUser" />
+        <activity android:name=".specialized.followPatient.MainFollowPatient" />
+        <activity android:name=".specialized.followPatient.DailyScheduleFollowPatent"></activity>
+    </application>
+
+</manifest>
