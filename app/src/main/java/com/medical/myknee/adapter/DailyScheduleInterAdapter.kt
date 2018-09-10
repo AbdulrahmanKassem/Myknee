@@ -30,14 +30,30 @@ class DailyScheduleInterAdapter(val context: Context,
         if (position == 0) {
             tvNameWeekExercise.text = weekName
             tvName.text = daysArray[position].dayName
-            tvExerciseMorning.text = "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.hour} : " +
-                    "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.minute}"
-            tvExerciseEvening.text = "${daysArray[position].timeOfExerciseInDay!!.exerciseEvening!!.hour} : " +
-                    "${daysArray[position].timeOfExerciseInDay!!.exerciseEvening!!.minute}"
+            if (daysArray[position].timeOfExerciseInDay!!.exerciseMorning!=null){
+                tvExerciseMorning.text = "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.hour} : " +
+                        "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.minute}"
+
+                tvDate.text = "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.year} / " +
+                        "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.month} /" +
+                        "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.day} "
+            }else{
+                tvExerciseMorning.text ="-"
+            }
+
+            if (daysArray[position].timeOfExerciseInDay!!.exerciseEvening!=null){
+
+                tvExerciseEvening.text = "${daysArray[position].timeOfExerciseInDay!!.exerciseEvening!!.hour} : " +
+                        "${daysArray[position].timeOfExerciseInDay!!.exerciseEvening!!.minute}"
+                tvDate.text = "${daysArray[position].timeOfExerciseInDay!!.exerciseEvening!!.year} / " +
+                        "${daysArray[position].timeOfExerciseInDay!!.exerciseEvening!!.month} /" +
+                        "${daysArray[position].timeOfExerciseInDay!!.exerciseEvening!!.day} "
+            }else{
+                tvExerciseEvening.text ="-"
+            }
+
             //   ivDoExercise.text=weekName
-            tvDate.text = "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.year} / " +
-                    "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.month} /" +
-                    "${daysArray[position].timeOfExerciseInDay!!.exerciseMorning!!.day} "
+
             if (daysArray[position].isDo) {
                 ivDoExercise.setImageResource(R.mipmap.ic_check)
             } else {

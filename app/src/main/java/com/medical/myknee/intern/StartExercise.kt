@@ -110,7 +110,9 @@ class StartExercise : BaseActivity() {
     }
 
     private fun takeBreak(){
-        counter = 30
+        exerciseImage.setImageDrawable(null)
+
+        counter = 10
         tvTimer.text = counter.toString()
         btnNextOrFinish.text = "التالي"
         btnNextOrFinish.setBackgroundResource(R.drawable.rounded4px_corners_fill_green)
@@ -120,7 +122,7 @@ class StartExercise : BaseActivity() {
             tvTimer.text = "وقت الراحه : $counter"
 
             if (counter > 0) {
-                updateHandler.postDelayed(runnable, 2200)
+                updateHandler.postDelayed(runnable, 2700)
             } else {
                 if (exerciseNumber < arrayTraining!!.size) {
                     btnNextOrFinish.visibility = View.VISIBLE

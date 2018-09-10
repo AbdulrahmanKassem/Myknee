@@ -142,6 +142,7 @@ class SelectUser : BaseActivity(), View.OnClickListener {
             R.id.logOut -> {
                 FirebaseAuth.getInstance().signOut()
                 startActivity(Intent(this@SelectUser, SignInActivity::class.java))
+                this@SelectUser.finish()
                 return true}
 
         }
